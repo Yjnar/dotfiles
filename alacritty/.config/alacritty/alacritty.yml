@@ -1,0 +1,27 @@
+font:
+  normal:
+    #family: FiraCode Nerd Font
+    #family: UbuntuMono Nerd Font
+    #family: Mononoki Nerd Font
+    style: Regular
+
+  # The bold font face
+  bold:
+    #family: FiraCode Nerd Font
+    #family: UbuntuMono Nerd Font  
+    #family: Mononoki Nerd Font
+    style: Bold
+
+  # The italic font face
+  italic:
+    #family: FiraCode Nerd Font
+    #family: UbuntuMono Nerd Font
+    #family: Mononoki Nerd Font
+    style: Italic
+
+  size: 9.0
+
+window:
+  padding:
+    x: 15
+    y: 15
