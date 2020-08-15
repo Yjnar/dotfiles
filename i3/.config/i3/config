@@ -87,7 +87,6 @@ bindsym Mod1+F4 kill
 
 # core
 bindsym $Mod+w          exec --no-startup-id chromium
-bindsym $Mod+Shift+w    exec --no-startup-id chromium --incognito
 bindsym $Mod+f          exec --no-startup-id pcmanfm
 bindsym $Mod+t          exec --no-startup-id alacritty
 bindsym $Mod+Return     exec --no-startup-id alacritty
@@ -98,12 +97,6 @@ bindsym $Mod+x exec --no-startup-id rofi_run -l
 
 # Screenshot
 bindsym Print exec --no-startup-id "scrot '%S.png' -e 'mv $f $$(xdg-user-dir PICTURES)/ArchLabs-%S-$wx$h.png ; feh $$(xdg-user-dir PICTURES)/ArchLabs-%S-$wx$h.png'"
-
-# Discord relaunch script
-bindsym $Mod+Shift+k    exec --no-startup-id /home/erik/Scripts/discord.sh
-
-# Main monitor output only
-bindsym $Mod+Shift+p	exec --no-startup-id /home/erik/Scripts/mainmonitor.sh
 
 # 3 monitors + 1080p TV in HDMI-0:
 bindsym $Mod+Shift+l    exec --no-startup-id /home/erik/Scripts/monitorsetup_plus_tv.sh
@@ -116,10 +109,6 @@ bindsym XF86AudioStop        exec --no-startup-id playerctl stop
 bindsym XF86AudioMute        exec --no-startup-id pamixer -t
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 2
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 2
-
-# backlight
-bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
 ################################################################
 ###########          Workspace Bindings          ###############
@@ -137,7 +126,6 @@ workspace $WS8 output $Mon3
 workspace $WS9 output $Mon3
 workspace $WS10 output $Mon4
 
-
 # switch to workspace
 bindsym $Mod+1 workspace $WS1
 bindsym $Mod+2 workspace $WS2
@@ -149,7 +137,6 @@ bindsym $Mod+7 workspace $WS7
 bindsym $Mod+8 workspace $WS8
 bindsym $Mod+9 workspace $WS9
 bindsym $Mod+0 workspace $WS10
-
 
 # switch to workspace - numpad alternatives
 bindsym $mod+Mod2+KP_1 workspace $WS1
@@ -166,7 +153,6 @@ bindsym $mod+Mod2+KP_0 workspace $WS10
 # switch to next or previous workspace
 bindsym $mod+Mod1+Left workspace prev
 bindsym $mod+Mod1+Right workspace next
-
 
 # move focused container to workspace
 bindsym $Mod+Shift+1 move container to workspace $WS1; workspace $WS1
@@ -267,17 +253,11 @@ bindsym $Mod+Control+Shift+minus gaps outer all     minus 5
 ############    application settings   ############
 ###################################################
 
-for_window [class="(?i)(?:qt5ct|pinentry)"] floating enable, focus
-for_window [class="(?i)(?:termite|thunar)"] focus
-for_window [class="(?i)(?:lutris)"] focus
-
 # Assign Applications to specific workspace
 # get class with xprop
 
-assign [class="(?i)(?:lutris)"] → $WS4
 assign [class="(?i)(?:discord)"] → $WS5
 assign [class="(?i)(?:ripcord)"] → $WS5
-assign [class="(?i)(?:obs)"] → $WS5
 
 # focus, floating, & sticky
 for_window [title="(?i)(?:copying|deleting|moving)"] floating enable
