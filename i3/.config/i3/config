@@ -84,7 +84,6 @@ bindsym Mod1+F4 kill
 
 # core
 bindsym $Mod+w          exec --no-startup-id chromium
-bindsym $Mod+Shift+w    exec --no-startup-id chromium --incognito
 bindsym $Mod+f          exec --no-startup-id pcmanfm
 bindsym $Mod+t          exec --no-startup-id alacritty
 bindsym $Mod+Return     exec --no-startup-id alacritty
@@ -95,9 +94,6 @@ bindsym $Mod+x exec --no-startup-id rofi_run -l
 
 # Screenshot
 bindsym Print exec --no-startup-id "scrot '%S.png' -e 'mv $f $$(xdg-user-dir PICTURES)/ArchLabs-%S-$wx$h.png ; feh $$(xdg-user-dir PICTURES)/ArchLabs-%S-$wx$h.png'"
-
-# Discord relaunch script
-bindsym $Mod+Shift+k    exec --no-startup-id /home/erik/Scripts/discord.sh
 
 # 3 monitors + 1080p TV in HDMI-0:
 bindsym $Mod+Shift+l    exec --no-startup-id /home/erik/Scripts/monitorsetup_plus_tv.sh
@@ -253,8 +249,6 @@ bindsym $Mod+Control+Shift+minus gaps outer all     minus 5
 ###################################################
 ############    application settings   ############
 ###################################################
-
-#for_window [class="(?i)(?:qt5ct|pinentry)"] floating enable, focus
 
 # Assign Applications to specific workspace
 # get class with xprop
