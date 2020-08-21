@@ -5,3 +5,4 @@ Dependencies:
 alacritty
 i3
 polybar
+rofi
