@@ -4,34 +4,14 @@ include-file = /home/erik/.config/polybar/modules.conf
 
 ; i3 Bar
 
-[bar/i3-middle-bar]
+[bar/i3-bar]
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = DP-2
+monitor = eDP-1
 
 modules-left   = i3 title
 modules-center = clock
 modules-right  = ${env:POLYBAR_MODULES:spotify coreuse temperature memory pkg volume}
 
-[bar/i3-left-bar]
-inherit = bar/master
-
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = DP-0
-
-modules-left   = i3 title
-modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory volume}
-
 tray-position = right
-
-[bar/i3-right-bar]
-inherit = bar/master
-
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = DVI-D-0
-
-modules-left   = i3 title
-modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory volume}
